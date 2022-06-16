@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>World</title>
+    <style>
+        #world>h1 {
+            margin-left: 105px;
+            margin-bottom: 10px;
+        }
+
+        #upper {
+            width: 85%;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            grid-template-rows: repeat(8, auto);
+            grid-template-areas: "china china china a a ads ads"
+                "china china china b b ads ads "
+                "china china china c c ads ads"
+                "china china china d d popular popular"
+                "us us us e e popular popular"
+                "us us us f f popular popular"
+                "us us us g g popular popular"
+                "us us us h h popular popular";
+            column-gap: 15px;
+            row-gap: 10px;
+        }
+
+        .china {
+            box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+            border-radius: 10px;
+            /* width:500px; */
+        }
+
+        .china>img {
+            width: 100%;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+        }
+
+        #china-h1 {
+            margin-top: -1px;
+            width: 69%;
+
+            font-size: 25px;
+            margin-left: 7px;
+            margin-bottom: -6px;
+        }
+
+        #us-h1 {
+            margin-top: -1px;
+            width: 90%;
+
+            font-size: 25px;
+            margin-left: 7px;
+            margin-bottom: -6px;
+        }
+
+        .china>p {
+            width: 90%;
+            /* margin-top: -5px; */
+            margin-left: 7px;
+
+        }
+
+        #upper>div:nth-child(1) {
+            cursor: pointer;
+            grid-area: china;
+
+        }
+
+        #upper>div:nth-child(2) {
+            cursor: pointer;
+            grid-area: us;
+        }
+
+        #upper>div:nth-child(3) {
+            cursor: pointer;
+            grid-area: a;
+        }
+
+        #upper>div:nth-child(4) {
+            cursor: pointer;
+            grid-area: b;
+        }
+
+        #upper>div:nth-child(5) {
+            cursor: pointer;
+            grid-area: c;
+        }
+
+        #upper>div:nth-child(6) {
+            cursor: pointer;
+            grid-area: d;
+        }
+
+        #upper>div:nth-child(7) {
+            cursor: pointer;
+            grid-area: e;
+        }
+
+        #upper>div:nth-child(8) {
+            cursor: pointer;
+            grid-area: f;
+        }
+
+        #upper>div:nth-child(9) {
+            cursor: pointer;
+            grid-area: g;
+        }
+
+        #upper>div:nth-child(10) {
+            cursor: pointer;
+            grid-area: h;
+        }
+
+        #upper>div:nth-child(11) {
+            background-color: wheat;
+            grid-area: ads;
+            margin-left: -5px;
+        }
+
+        #upper>div:nth-child(12) {
+            background-color: #f8f8f8;
+            box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+            grid-area: popular;
+            /* height: 90px; */
+        }
+
+
+        .sidebar {
+            display: flex;
+            box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;
+            height: 100px;
+            margin-bottom: -85px;
+            margin-left: 3px;
+        }
+
+        .sidebar>p {
+            margin-left: 20px;
+            /* height: 100%; */
+            margin-top: 5px;
+            width: 52%;
+            font-size: 17px;
+        }
+
+        .sidebar>img {
+
+            width: 30%;
+            /* height: 50%; */
+            margin-left: 10px;
+            margin-top: 5px;
+            margin-bottom: 20px;
+        }
+
+        /* MOST POPULAR */
+        #popular {
+            margin-left: -5px;
+        }
+
+        #popular>#most {
+            height: 60px;
+            color: rgb(197, 21, 21);
+            margin-left: 15px;
+
+        }
+
+        #popular>div {
+            display: flex;
+            box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px;
+            height: 75px;
+            cursor: pointer;
+        }
+
+        #popular>div>img {
+            width: 30%;
+            margin-top: 5px;
+            margin-bottom: 5px;
+            margin-right: 5px;
+        }
+
+        #popular>div>h3 {
+            margin-left: 10px;
+            font-size: 16px;
+            margin-top: 5px;
+        }
+
+        /* gallery */
+
+
+        #gallery {
+            width: 85%;
+            display: flex;
+            margin: auto;
+            margin-top: 30px;
+            background-color: #f3f2f2;
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+            margin-bottom: 25px;
+
+        }
+
+        #fornt {
+            width: 60%;
+        }
+
+        #fornt>img {
+            width: 96%;
+            display: block;
+            margin: auto;
+            /* box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px; */
+            box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px, rgba(0, 0, 0, 0.05) 0px 5px 10px;
+            border-top-left-radius: 10px;
+            cursor: pointer;
+
+        }
+
+        #fornt>h2 {
+            text-decoration: underline;
+            text-decoration-color: red;
+            margin-left: 20px;
+
+        }
+
+        #gallery-sidebar {
+
+            width: 39%;
+
+        }
+
+        #gallery-sidebar>h2 {
+            text-decoration: underline;
+            text-decoration-color: red;
+        }
+
+        #gallery-sidebar>div {
+            display: flex;
+            cursor: pointer;
+        }
+
+        #gallery-sidebar>div>img {
+            width: 35%;
+            margin-bottom: 10px;
+            /* margin-left: 10px; */
+            border-top-left-radius: 5px;
+            box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+        }
+
+        #gallery-sidebar>div>p {
+            margin-left: 20px;
+            font-size: 20px;
+        }
+
+        #gallery-sidebar>div:hover {
+            box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+
+        }
+
+        hr {
+            margin-top: -1px;
+            width: 85%;
+            color: #f3f2f2;
+        }
+
+        hr+hr {
+            margin-top: -7px;
+        }
+
+        /* Neighbour */
+
+        .neig {
+            width: 85%;
+            margin: auto;
+
+
+        }
+
+        .neig>h2 {
+            text-decoration: underline;
+            text-decoration-color: red;
+            margin-top: 5px;
+        }
+
+        .neig>div {
+            display: flex;
+            margin-left: 15px;
+            width: 70%;
+        }
+
+        .neig>div>div>img {
+            width: 95%;
+            margin: auto;
+            display: block;
+            margin-top: 5px;
+            box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+        }
+
+        .neig>div>div {
+            /* border: 1px solid red; */
+            margin-left: 30px;
+            margin-top: -17px;
+        }
+
+        .neig>div>div>h4 {
+            margin-left: 7px;
+            font-size: 18px;
+            line-height: 20px;
+        }
+
+        .neig>div>div>h4+h4 {
+            margin-top: -10px;
+        }
+
+        /* Asia */
+        .asia {
+            width: 85%;
+            margin: auto;
+
+        }
+
+        .asia>h2 {
+            text-decoration: underline;
+            text-decoration-color: red;
+            margin-top: 5px;
+
+        }
+
+        .asia-a {
+            display: flex;
+            margin-left: 27px;
+            margin-top: -15px;
+        }
+
+        .asia-a>div {
+            width: 23%;
+            margin: auto;
+        }
+
+        .asia-a>div>img {
+            width: 100%;
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
+        }
+
+        .asia-a>div>h4 {
+            margin-left: 7px;
+            font-size: 19px;
+            line-height: 20px;
+            margin-top: 6px;
+        }
+/* asia-secound part */
+.asia-b{
+    display: flex;
+    margin-left: 27px;
+    margin-top: 30px;
+}
+        .asia-b>div {
+            display: flex;
+            width: 23%;
+            margin: auto;
+        }
+        .asia-b>div>img{
+            width: 36%;
+            height: 50%;
+            box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+        }
+        .asia-b>div>h5{
+            margin-left: 10px;
+            font-size: 16px;
+            margin-top: 0px;
+        }
+
+
+    </style>
+</head>
+
+<body>
+    <div id="world">
+        <h1><u> WORLD</u></h1>
+    </div>
+    <!-- Upper page -->
+    <div id="upper">
+        <div class="china">
+            <img src="https://s3.ap-southeast-1.amazonaws.com/images.deccanchronicle.com/dc-Cover-g8esftggd71s5rmm0p3lflkl10-20220612064214.jpeg"
+                alt="">
+            <h1 id="china-h1">China is its position long LAC; US Secretary of Defense</h1>
+            <p>This is the second time this week that a senior US official has commented on the India-China stand-off
+            </p>
+        </div>
+        <div class="china">
+            <img src="https://s3.ap-southeast-1.amazonaws.com/images.deccanchronicle.com/dc-Cover-t1g02g0da4okqabdmppkrung71-20220611115202.jpeg"
+                alt="">
+            <h1 id="us-h1">US lifts COVID-19 test requirement for international travel</h1>
+            <p>A senior senior administration official said that the agency would reevluate the need for the testing
+                requirement every 90 days</p>
+        </div>
+        <div class="sidebar">
+            <img src="https://s3.ap-southeast-1.amazonaws.com/images.deccanchronicle.com/dc-Cover-jgbpi0o0p2ld76muet9tu5gvc5-20220607105000.jpeg"
+                alt="">
+
+            <p>Boris Johnson wins no-confidence vote but the margin will make him nervous</p>
+
+        </div>
+        <div class="sidebar">
+            <img src="https://s3.ap-southeast-1.amazonaws.com/images.deccanchronicle.com/dc-Cover-aavdqqcm0t04ghch753ikskla1-20220326000331.jpeg"
+                alt="">
+            <p>British Prime Minister Boris Johnson to face confidence vote</p>
+        </div>
+        <div class="sidebar">
+            <img src="https://s3.ap-southeast-1.amazonaws.com/images.deccanchronicle.com/dc-Cover-f2u39afj17in2npbh6is2loca6-20170718020817.jpeg"
+                alt="">
+            <p>Pakistan's General Mushar ref critical in UAE says ex-minister</p>
+        </div>
+        <div class="sidebar">
+            <img src="https://s3.ap-southeast-1.amazonaws.com/images.deccanchronicle.com/dc-Cover-o0ggi60qreumqdp7jacrsvg3u1-20220605122644.jpeg"
+                alt="">
+            <p>Amid Imran Khan's assassi nation rumours, security agencies on high alert in Islamabad</p>
+        </div>
+        <div class="sidebar">
+            <img src="https://s3.ap-southeast-1.amazonaws.com/images.deccanchronicle.com/dc-Cover-uv23638o8qnk2smdvvcdj14hr1-20220604124043.jpeg"
+                alt="">
+            <p>Russia may be in Ukraine to stay after 100 days of war</p>
+        </div>
+        <div class="sidebar">
+            <img src="https://s3.ap-southeast-1.amazonaws.com/images.deccanchronicle.com/dc-Cover-823bir7phfjqh19gf1b31467p2-20220601132030.jpeg"
+                alt="">
+            <p>Shanghai starts coming back to life as COVID lockdown eases</p>
+        </div>
+        <div class="sidebar">
+            <img src="https://s3.ap-southeast-1.amazonaws.com/images.deccanchronicle.com/dc-Cover-ehn3cgkc6ju8tj48fo0leqqlc6-20220530120936.jpeg"
+                alt="">
+            <p>No survivors found at Tara Air plane crash site collection of dead bodies begins</p>
+        </div>
+        <div class="sidebar">
+            <img src="https://s3.ap-southeast-1.amazonaws.com/images.deccanchronicle.com/dc-Cover-6lq8j792kb1mktl2rikid8u1a7-20220529120349.jpeg"
+                alt="">
+            <p>Plane carrying 22 people on board, including four Indians goes missing in Nepal</p>
+        </div>
+        <div></div>
+        <div id="popular">
+            <div id="most">
+                <h2><u>MOST POPULAR</u></h2>
+            </div>
+            <div>
+                <h3>Word's largest cricket jersey was made within nine days</h3>
+                <img src="https://s3.ap-southeast-1.amazonaws.com/images.deccanchronicle.com/dc-Cover-b5nq5e0ku3g1nctek2tkqtah67-20220601160558.jpeg"
+                    alt="">
+
+            </div>
+            <div>
+                <h3>
+                    Viral fever with gastro, dengue cases increse in Hyderabad
+                </h3>
+                <img src="https://s3.ap-southeast-1.amazonaws.com/images.deccanchronicle.com/dc-Cover-efb18qerodo9jp7egg2v41otq4-20210607215443.jpeg"
+                    alt="">
+            </div>
+            <div>
+                <h3>AP man donates his retirement founds for SSY scheme , gets PM Modi's pat</h3>
+                <img src="https://s3.ap-southeast-1.amazonaws.com/images.deccanchronicle.com/dc-Cover-affitcqkm355isuv1pg8jsobg2-20220530033206.jpeg"
+                    alt="">
+            </div>
+            <div>
+                <h3>Low blow for alcohol lovers as liqor prices go higher in Telangana</h3>
+                <img src="https://s3.ap-southeast-1.amazonaws.com/images.deccanchronicle.com/dc-Cover-gh6knkudub2ksq1v7mg76isbi6-20170710011908.jpeg"
+                    alt="">
+            </div>
+            <div>
+                <h3>Nation's envy Ts legislators are highest paid in the country</h3>
+                <img src="https://s3.ap-southeast-1.amazonaws.com/images.deccanchronicle.com/dc-Cover-0fr7ofu4cef9a2dbis2tuej3p1-20161209024602.jpeg"
+                    alt="">
+            </div>
+            <div>
+                <h3>Experts for study on bee population</h3>
+                <img src="https://s3.ap-southeast-1.amazonaws.com/images.deccanchronicle.com/dc-Cover-jo4gv47qlta9dm26aflc6le3i4-20180816125314.jpeg"
+                    alt="">
+            </div>
+        </div>
+    </div>
+
+    <!-- gallery -->
+    <div id="gallery">
+        <div id="fornt">
+            <h2>GALLERY</h2>
+            <img src="https://s3.ap-southeast-1.amazonaws.com/images.deccanchronicle.com/dc-Cover-dmaetsmltie50e4okrnrnbo723-20211113155011.Medi.jpeg"
+                alt="">
+
+        </div>
+        <div id="gallery-sidebar">
+            <h2>MORE GALLERIES</h2>
+            <div>
+                <img src="https://s3.ap-southeast-1.amazonaws.com/images.deccanchronicle.com/dc-Cover-dmaetsmltie50e4okrnrnbo723-20211113155011.Medi.jpeg"
+                    alt="">
+                <p>In Pictures | COP26 protesesters in Glasgow</p>
+            </div>
+            <div>
+                <img src="https://s3.ap-southeast-1.amazonaws.com/images.deccanchronicle.com/dc-Cover-v7hd9r03mm20tbn9h879icamc1-20200727100733.Medi.jpeg"
+                    alt="">
+                <p>This year Hajj pilgrims to be given sterilised pebbles</p>
+            </div>
+            <div>
+                <img src="https://s3.ap-southeast-1.amazonaws.com/images.deccanchronicle.com/dc-Cover-2gjsa7d44bh66b9jqdbr045ht4-20200725181931.Medi.jpeg"
+                    alt="">
+                <p>In Pictures| Standoff with federal agents countinues in Portland</p>
+            </div>
+            <div>
+                <img src="https://s3.ap-southeast-1.amazonaws.com/images.deccanchronicle.com/dc-Cover-e4iu0nlq73brfqqkkb7ritd8j1-20200501124511.Medi.jpeg"
+                    alt="">
+                <p>For these penguins in Singspore's city zoo, lockdown is flippin'fun</p>
+            </div>
+        </div>
+    </div>
+    <!-- Neighbour -->
+    <hr>
+    <hr>
+    <div class="neig">
+        <h2>NEIGHBOUR</h2>
+        <div>
+            <div>
+                <img src="https://dc-cdn.s3-ap-southeast-1.amazonaws.com/dc-Cover-dcb8amp2r8vps8n5ep2i7o2125-20160718153721.jpeg"
+                    alt="">
+                <h4>Sri Lankan prime minister Maninda Raja Paka resigns after voiolent</h4>
+                <h4>Sri Lanka's new PM Wick remesingha saus he looks forword to closer ties with India</h4>
+            </div>
+            <div>
+                <img src="https://s3.ap-southeast-1.amazonaws.com/images.deccanchronicle.com/dc-Cover-h4p2ufdalfobav10rjv3fnfn31-20170722172858.jpeg"
+                    alt="">
+                <h4>Arjuna Ranatunga seeks help from sathya sai trust</h4>
+                <h4>Sri Lanka's new PM Wick remesingha saus he looks forword to closer ties with India</h4>
+            </div>
+            <div>
+                <img src="https://s3.ap-southeast-1.amazonaws.com/images.deccanchronicle.com/dc-Cover-bbjaof6hp88cj407gi6f8kdgj2-20220512113337.jpeg"
+                    alt="">
+                <h4>Sri Lanka president set to name new prime minister</h4>
+                <h4>Sri Lanka's new PM Wick remesingha saus he looks forword to closer ties with India</h4>
+            </div>
+
+        </div>
+    </div>
+    <hr>
+    <hr>
+    <!-- Asia -->
+    <div class="asia">
+        <h2>ASIA</h2>
+        <div class="asia-a">
+            <div>
+                <img src="https://s3.ap-southeast-1.amazonaws.com/images.deccanchronicle.com/dc-Cover-l76i5vpm67r7vkjr1h8n40rgr0-20220403110659.jpeg"
+                    alt="">
+                <h4>COVID-19 cases rise in shamghai with millions under lockdown</h4>
+            </div>
+            <div>
+                <img src="https://s3.ap-southeast-1.amazonaws.com/images.deccanchronicle.com/dc-Cover-h4s2a4nd45tttagk7ml09mvv24-20220314082449.jpeg"
+                    alt="">
+                <h4>major chinese cities impose COVID-19 restriction as cases spike</h4>
+            </div>
+            <div>
+                <img src="https://s3.ap-southeast-1.amazonaws.com/images.deccanchronicle.com/dc-Cover-188ggt9kb0c8i43gcbu87crta0-20220227114140.jpeg"
+                    alt="">
+                <h4>Lorem ipsum dolor sit amet consectetur adipisicing.</h4>
+            </div>
+            <div>
+                <img src="https://s3.ap-southeast-1.amazonaws.com/images.deccanchronicle.com/dc-Cover-5f4r1ko3dpo0hj3d2fk7tp0mu3-20220408071231.jpeg"
+                    alt="">
+                <h4> Pakistan Assemmbly reinstated for no-trust vote</h4>
+            </div>
+        </div>
+        <div class="asia-b">
+
+            <div>
+                <img src="https://s3.ap-southeast-1.amazonaws.com/images.deccanchronicle.com/dc-Cover-0224c9ttvi6fhab2jo98l7p0r2-20220209091025.jpeg"
+                    alt="">
+                <h5>South Korea regrets Hyudai pak's offensive pak's offensive post as India erurts</h5>
+            </div>
+            <div>
+                <img src="https://s3.ap-southeast-1.amazonaws.com/images.deccanchronicle.com/dc-Cover-emjsluclb00plnrju4qdkqk2q4-20220130102052.jpeg"
+                    alt="">
+                <h5>Nonth Korea test-firse most power full missile since-2017</h5>
+            </div>
+            <div>
+                <img src="https://s3.ap-southeast-1.amazonaws.com/images.deccanchronicle.com/dc-Cover-7ho1ot5dfm94lcu7j9khoij875-20220122134259.jpeg"
+                    alt="">
+                <h5>South Korea regrets Hyudai pak's offensive pak's offensive post as India erurts</h5>
+            </div>
+            <div>
+                <img src="https://s3.ap-southeast-1.amazonaws.com/images.deccanchronicle.com/dc-Cover-m03sps011ptopa3qccklk0amj5-20220228095558.jpeg"
+                    alt="">
+                <h5>Nonth Korea test-firse most power full missile since-2017</h5>
+            </div>
+        </div>
+    </div>
+    </div>
+    <hr>
+    <hr>
+    <!-- MIDDLE EAST -->
+    <div class="neig">
+        <h2>MIDDLE EAST</h2>
+        <div>
+            <div>
+                <img src="https://s3.ap-southeast-1.amazonaws.com/images.deccanchronicle.com/dc-Cover-vdkk9clen1pofbh9b27hd8ruf4-20220106170424.jpeg"
+                    alt="">
+                <h4>Sri Lankan prime minister Maninda Raja Paka resigns after voiolent</h4>
+                <h4>Sri Lanka's new PM Wick remesingha saus he looks forword to closer ties with India</h4>
+            </div>
+            <div>
+                <img src="https://s3.ap-southeast-1.amazonaws.com/images.deccanchronicle.com/dc-Cover-qs4dvgmfd1rfev6k9jjb3p88q3-20211008194207.jpeg"
+                    alt="">
+                <h4>Arjuna Ranatunga seeks help from sathya sai trust</h4>
+                <h4>Sri Lanka's new PM Wick remesingha saus he looks forword to closer ties with India</h4>
+            </div>
+            <div>
+                <img src="https://s3.ap-southeast-1.amazonaws.com/images.deccanchronicle.com/dc-Cover-rduo5ljl7868eoug056qmoqeo3-20220208105513.jpeg"
+                    alt="">
+                <h4>Sri Lanka president set to name new prime minister</h4>
+                <h4>Sri Lanka's new PM Wick remesingha saus he looks forword to closer ties with India</h4>
+            </div>
+
+        </div>
+    </div>
+    <hr>
+    <hr>
+    <!-- AMERICA -->
+    <div class="asia">
+        <h2>AMERICA</h2>
+        <div class="asia-a">
+            <div>
+                <img src="https://s3.ap-southeast-1.amazonaws.com/images.deccanchronicle.com/dc-Cover-r26djqmuj3sf28fqapcq830v02-20220523125328.jpeg"
+                    alt="">
+                <h4>COVID-19 cases rise in shamghai with millions under lockdown</h4>
+            </div>
+            <div>
+                <img src="https://s3.ap-southeast-1.amazonaws.com/images.deccanchronicle.com/dc-Cover-3350pfv6ov7cfcih2srhgnmfr0-20220302101722.jpeg"
+                    alt="">
+                <h4>major chinese cities impose COVID-19 restriction as cases spike</h4>
+            </div>
+            <div>
+                <img src="https://s3.ap-southeast-1.amazonaws.com/images.deccanchronicle.com/dc-Cover-qo4lkc94037m2ug36rq5r9q8a6-20200706164004.jpeg"
+                    alt="">
+                <h4>Lorem ipsum dolor sit amet consectetur adipisicing.</h4>
+            </div>
+            <div>
+                <img src="https://s3.ap-southeast-1.amazonaws.com/images.deccanchronicle.com/dc-Cover-sq1mft5d7g2r6qtfl3aqrsuq56-20220223071551.jpeg"
+                    alt="">
+                <h4> Pakistan Assemmbly reinstated for no-trust vote</h4>
+            </div>
+        </div>
+        <div class="asia-b">
+
+            <div>
+                <img src="https://s3.ap-southeast-1.amazonaws.com/images.deccanchronicle.com/dc-Cover-obp4ib6kdde7cmmk7bmbmqjq55-20220322112631.jpeg"
+                    alt="">
+                <h5>South Korea regrets Hyudai pak's offensive pak's offensive post as India erurts</h5>
+            </div>
+            <div>
+                <img src="https://s3.ap-southeast-1.amazonaws.com/images.deccanchronicle.com/dc-Cover-bl6c6n6a2h1flql82u70ns6cu7-20180419025737.jpeg"
+                    alt="">
+                <h5>Nonth Korea test-firse most power full missile since-2017</h5>
+            </div>
+            <div>
+                <img src="https://s3.ap-southeast-1.amazonaws.com/images.deccanchronicle.com/dc-Cover-9jk8ck7r37p2490j3ki73jpkn0-20220409113557.jpeg"
+                    alt="">
+                <h5>South Korea regrets Hyudai pak's offensive pak's offensive post as India erurts</h5>
+            </div>
+            <div>
+                <img src="https://s3.ap-southeast-1.amazonaws.com/images.deccanchronicle.com/dc-Cover-eoouf6o622k0n03i8oufbvseq4-20220216102459.jpeg"
+                    alt="">
+                <h5>Nonth Korea test-firse most power full missile since-2017</h5>
+            </div>
+        </div>
+    </div>
+    </div>
+</body>
+
+</html>
