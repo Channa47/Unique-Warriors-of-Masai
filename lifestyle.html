@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lifestyle</title>
+    <style>
+        #container{
+            width: 80%;
+            /* height: 800px; */
+            display: grid;
+            grid-template-columns: 40% 30% 30%;
+            grid-template-rows: 1fr;
+            border: 2px solid red;
+            /* text-align: center; */
+            margin: auto;
+            grid-column-gap: 15px;
+        }
+        #container1{
+            /* height: 98%; */
+            border: 2px solid black;
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr 1fr;
+            grid-row-gap: 20px;
+        }
+        .innercon1{
+            border: 2px solid green;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+            transition: 1s;
+        }
+        .innercon1:hover{
+            transform:scale(1.03);
+        }
+        .image1{
+            height: 70%;
+            width: 100%;
+        }
+        .image1+p{
+            font-size: 20px;
+            font-weight: bold;
+            margin-top: -3px;
+        }
+        #container2{
+            border: 2px solid black;
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: repeat(8,1fr);
+            display: grid;
+            grid-row-gap: 5px;
+        }
+        .innercon2{
+            border: 2px solid green;
+            display: flex;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+            transition: 1s;
+        }
+        .innercon2:hover{
+            transform:scale(1.05);
+        }
+        .image2{
+            width: 40%;
+            height: 100%;
+        }
+        .innercon2>img+p{
+            margin-left: 15px;
+        }
+        #container3{
+            border: 2px solid black;
+        }
+        .innercon3{
+            height: 50%;
+            width: 100%;
+            border: 2px solid teal;
+            display: grid;
+            grid-row-gap: 5px;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        }
+        
+        #innercon32{
+            display:grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: repeat(4,1fr);
+            border: 2px solid violet;
+        }
+        .innerin{
+            border: 2px solid blue;
+            display: flex;
+            width: 100%;
+            transition: 1s;
+        }
+        .innerin:hover{
+            transform:scale(1.05);
+        }
+        .imageofrightside{
+            width:40%;
+            height: 100%;
+            margin-left: 10px;
+        }
+        #ptag{
+            font-size: 20px;
+            margin: auto;
+            
+        }
+        #maincontainer{
+            /* height: 400px; */
+            width: 80%;
+            border: 2px solid red;
+            margin: auto;
+        }
+        #maincontainer>p{
+            font-size: 20px;
+            font-weight: bold;
+            border: 1px solid green;
+        }
+        #line1{
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            grid-template-rows: 1fr;
+            width:100%;
+            grid-column-gap: 20px;
+        }
+        .innerline11{
+            width: 100%;
+            border: 2px solid black;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+            transition: 1s;
+        }
+        .innerline11:hover{
+            transform:scale(1.05);
+        }
+        .innerline11>img{
+            width: 100%;
+        }
+        #line2{
+            /* height: 400px; */
+            width: 100%;
+            margin: auto;
+            border: 2px solid red;
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            grid-template-rows: 1fr;
+            grid-column-gap: 20px;
+        }
+        .innerline21{
+            width: 100%;
+            border: 2px solid black;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+            transition: 1s;
+        }
+        .innerline21:hover{
+            transform:scale(1.05);
+        }
+        .innerline21>img{
+            width: 100%;
+        }
+        #line3{
+            /* height: 400px; */
+            width: 100%;
+            margin: auto;
+            border: 2px solid red;
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            grid-template-rows: 1fr;
+            grid-column-gap: 20px;
+        }
+        .innerline31{
+            width: 100%;
+            border: 2px solid black;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+            transition: 1s;
+        }
+        .innerline31:hover{
+            transform:scale(1.05);
+        }
+        .innerline31>img{
+            width: 100%;
+        }
+        #line4{
+            /* height: 400px; */
+            width: 100%;
+            margin: auto;
+            border: 2px solid red;
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            grid-template-rows: 1fr;
+            grid-column-gap: 20px;
+        }
+        .innerline41{
+            width: 100%;
+            border: 2px solid black;
+            transition: 1s;
+        }
+        .innerline41:hover{
+            transform:scale(1.05);
+        }
+        .innerline41>img{
+            width: 100%;
+        }
+        #container3>div>img{
+            width: 100%;
+            height: 100%;
+        }
+       
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="container1">
+            <div class="innercon1" id="images1">
+                <img src="https://s3.ap-southeast-1.amazonaws.com/images.deccanchronicle.com/dc-Cover-r7s8taq5hp0fm1upu432k0g040-20170816083125.jpeg" alt="error" class="image1">
+                <p>Youngsters sleepless in Hyderabad</p>
+                <p>Snacking late,watching movies cause mental health disorder</p>
+            </div>
+            <div class="innercon1" id="images2">
+                <img src="https://s3.ap-southeast-1.amazonaws.com/images.deccanchronicle.com/dc-Cover-nf91gd4p2081f7hk92grbsg4p3-20190921002020.jpeg" alt="error" class="image1">
+                <p>Listen to your body when it warns you that you’re heading for trouble</p>
+                <p>Bystanders can provide CPR (cardio-pulmonary resuscitation) in case of a cardio-respiratory arrest till medical professionals take over</p>
+            </div>
+        </div>
+
+        <div id="container2">
+            <div class="innercon2" id="images3">
+                <img src="https://s3.ap-southeast-1.amazonaws.com/images.deccanchronicle.com/dc-Cover-opfmtb79e99qq2n8q4sjh5aee2-20190514013250.jpeg" alt="error" class="image2">
+                <p>King Koti hospital to use a device to alleviate labour pain</p>
+            </div>
+            <div class="innercon2">
+                <img src="https://s3.ap-southeast-1.amazonaws.com/images.deccanchronicle.com/dc-Cover-mobsqce51rrgnvq4733v4m3gn6-20220608073926.jpeg" alt="error" class="image2">
+                <p>Some fine reading material</p>
+            </div>
+            <div class="innercon2">
+                <img src="https://s3.ap-southeast-1.amazonaws.com/images.deccanchronicle.com/dc-Cover-8cv5od22mvrk0srpr3f9l98mg1-20220614003929.jpeg" alt="error" class="image2">
+                <p>Deccan's historian Nayeem passes away</p>
+            </div>
+            <div class="innercon2">
+                <img src="https://s3.ap-southeast-1.amazonaws.com/images.deccanchronicle.com/dc-Cover-jsea3jl94darm4h6b8f4mhp542-20220607011850.jpeg" alt="error" class="image2">
+                <p>A rainbow on my plate</p>
+            </div>
+            <div class="innercon2">
+                <img src="https://s3.ap-southeast-1.amazonaws.com/images.deccanchronicle.com/dc-Cover-rr3g3eqojk0d79epl7ch1jgca3-20220606021403.jpeg" alt="error" class="image2">
+                <p>Fun with Falafel</p>
+            </div>
+            <div class="innercon2">
+                <img src="https://s3.ap-southeast-1.amazonaws.com/images.deccanchronicle.com/dc-Cover-052sv6p51d3g2h1i65tqnq1v13-20220605113952.jpeg" alt="error" class="image2">
+                <p>Book Review | Articulating India’s dance vocabularies of desire</p>
+            </div>
+            <div class="innercon2">
+                <img src="https://s3.ap-southeast-1.amazonaws.com/images.deccanchronicle.com/dc-Cover-052sv6p51d3g2h1i65tqnq1v13-20220605104404.jpeg" alt="error" class="image2">
+                <p>Book Review | G.N. Saibaba’s testimony of agony and hope</p>
+            </div>
+            <div class="innercon2">
+                <img src="https://s3.ap-southeast-1.amazonaws.com/images.deccanchronicle.com/dc-Cover-052sv6p51d3g2h1i65tqnq1v13-20220605105031.jpeg" alt="error" class="image2">
+                <p>Book Review | Warm and funny portrayal of the strifes that bind</p>
+            </div>
+        </div>
+        <div id="container3">
+            <div class="innercon3">
+                <img src="https://onemg.gumlet.io/image/upload/a_ignore,w_380,h_380,c_fit,q_auto,f_auto/v1651740405/ojwbratkb1hapqhual9m.jpg" alt="error">
+            </div>
+            <div class="innercon3" id="innercon32">
+                <div class="innerin">
+                    <p id="ptag"><u>MOST POPULAR</u></p>
+                </div>
+                <div class="innerin">
+                    <p>Govt schools across TS in dire straits, poor infra hampering quality education</p>
+                    <img class="imageofrightside" src="https://s3.ap-southeast-1.amazonaws.com/images.deccanchronicle.com/dc-Cover-0k9bpt67qg7uuq8cvcj5krvto0-20220613090900.jpeg" alt="error">
+                </div>
+                <div class="innerin">
+                    <p>World's largest cricket jersey was made within nine days</p>
+                    <img class="imageofrightside" src="https://s3.ap-southeast-1.amazonaws.com/images.deccanchronicle.com/dc-Cover-b5nq5e0ku3g1nctek2tkqtah67-20220601160558.jpeg" alt="error">
+                </div>
+                <div class="innerin">
+                    <p>Viral fever with gastro, dengue cases increase in Hyderabad</p>
+                    <img class="imageofrightside" src="https://s3.ap-southeast-1.amazonaws.com/images.deccanchronicle.com/dc-Cover-efb18qerodo9jp7egg2v41otq4-20210607215443.jpeg" alt="error">
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div id="maincontainer">
+        <p><u>HEALTH AND WELLBEING</u></p>
+        <div id="line1">
+            <div class="innerline11">
+                <img src="https://s3.ap-southeast-1.amazonaws.com/images.deccanchronicle.com/dc-Cover-pi3sdeepa92vpf4bis8eh77v12-20220108125958.jpeg" alt="error">
+                <p>For a ballerinas bod</p>
+            </div>
+            <div class="innerline11">
+                <img src="https://s3.ap-southeast-1.amazonaws.com/images.deccanchronicle.com/dc-Cover-s4pahki3ufm6i021tjf7ctur04-20211231225806.jpeg" alt="error">
+                <p>Immune response induced by Omicron effectively neutralise Delta variant: ICMR study</p>
+            </div>
+            <div class="innerline11">
+                <img src="https://s3.ap-southeast-1.amazonaws.com/images.deccanchronicle.com/dc-Cover-r38mrsai11citfb5jh8uoh4n80-20220515190058.jpeg" alt="error">
+                <p>The waist of the matter</p>
+            </div>
+            <div class="innerline11">
+                <img src="https://s3.ap-southeast-1.amazonaws.com/images.deccanchronicle.com/dc-Cover-3b7amics3lt856hdledrg8ima1-20211203185032.jpeg" alt="error">
+                <p>Dealing with Omicron, the party-pooper!</p>
+            </div>
+        </div>
+        <p><u>CULTURE AND SOCIETY</u></p>
+        <div id="line2">
+            <div class="innerline21">
+                <img src="https://s3.ap-southeast-1.amazonaws.com/images.deccanchronicle.com/dc-Cover-cdbt4e853gm37d9vi2vgchk2m2-20220205133614.jpeg" alt="error">
+                <p>Divine energies of full moon</p>
+            </div>
+            <div class="innerline21">
+                <img src="https://s3.ap-southeast-1.amazonaws.com/images.deccanchronicle.com/dc-Cover-8mua4to87cue854mmf1shniag4-20190527091800.jpeg" alt="error">
+                <p>Ego clashes lead to marital discord, divorce</p>
+            </div>
+            <div class="innerline21">
+                <img src="https://s3.ap-southeast-1.amazonaws.com/images.deccanchronicle.com/dc-Cover-usee4decanap45q154esjp07r6-20220520162520.jpeg" alt="error">
+                <p>Those distinguished men and their marvellous motorbikes</p>
+            </div>
+        </div>
+        <p><u>FOOD AND RECIPIES</u></p>
+        <div id="line3">
+            <div class="innerline31">
+                <img src="https://s3.ap-southeast-1.amazonaws.com/images.deccanchronicle.com/dc-Cover-q7kc0vpk298qfbuke4fo8vg962-20211217185725.jpeg" alt="error">
+                <p>Gingerbread house kits for Christmas</p>
+            </div>
+            <div class="innerline31">
+                <img src="https://s3.ap-southeast-1.amazonaws.com/images.deccanchronicle.com/dc-Cover-bvu6f5n9korom8ajf167kbqmp2-20210919175345.jpeg" alt="error">
+                <p>Finger food goodness</p>
+            </div>
+            <div class="innerline31">
+                <img src="https://s3.ap-southeast-1.amazonaws.com/images.deccanchronicle.com/dc-Cover-h9b1oo0p0k05ff4irrplar1891-20210802191200.jpeg" alt="error">
+                <p>It’s all in the booze</p>
+            </div>
+            <div class="innerline31">
+                <img src="https://s3.ap-southeast-1.amazonaws.com/images.deccanchronicle.com/dc-Cover-9ah8h16b1t9ihkce0lvs6sjen6-20210109164218.jpeg" alt="error">
+                <p>Happy hours, now delivered home</p>
+            </div>
+        </div>
+        <P><u>SEX AND RELATIONSHIP</u></P>
+        <div id="line4">
+            <div class="innerline41">
+                <img src="https://s3.ap-southeast-1.amazonaws.com/images.deccanchronicle.com/dc-Cover-d7qchmibph5q5d25o17i432qb2-20210313130943.jpeg" alt="error">
+                <p>Dating apps: your best wingman</p>
+            </div>
+            <div class="innerline41">
+                <img src="https://s3.ap-southeast-1.amazonaws.com/images.deccanchronicle.com/dc-Cover-bcac206jnkgiq2i62h3e2lc8o3-20211107220142.jpeg" alt="error">
+                <p>Making it official on the gram!</p>
+            </div>
+            <div class="innerline41">
+                <img src="https://s3.ap-southeast-1.amazonaws.com/images.deccanchronicle.com/dc-Cover-u65qc5ula221sm9prjebbibjj1-20210507104918.jpeg" alt="error">
+                <p>The new trend is Polyamorous Relationships</p>
+            </div>
+
+        </div>
+        <div id="line5"></div>
+    </div>
+</body>
+</html>
+
+<script>
+   document.querySelector("#images1").addEventListener("click",myFunction1);
+   document.querySelector("#images2").addEventListener("click",myFunction2);
+   document.querySelector("#images3").addEventListener("click",myFunction3);
+
+
+   function myFunction1(){
+    window.location.href="lifestyle1.html"
+   }
+   function myFunction2(){
+    window.location.href="lifestyle2.html"
+   }
+   function myFunction3(){
+    window.location.href="lifestyle3.html"
+   }
+
+</script>
