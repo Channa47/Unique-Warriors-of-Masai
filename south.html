@@ -46,6 +46,7 @@
         .col>div {
             box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
             border-radius: 10px 10px 0px 0px;
+            padding-bottom: 20px;
         }
 
         .col>div>img {
@@ -54,8 +55,8 @@
             border-radius: 10px 10px 0px 0px;
         }
 
-        h2+p {
-            padding-bottom: 20px;
+        h3+p {
+            padding-top: 10px;
         }
 
         .first>div:last-child {
@@ -70,10 +71,11 @@
         .mop>div {
             display: flex;
             box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
         }
 
         .mop>div>img {
-            width: 60%;
+            width: 120px;
             height: 80%;
            
         }
@@ -91,10 +93,11 @@
             display: flex;
             box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
              padding-left: 20px;
+             line-height: 24px;
         }
 
         .second>div>img {
-            width: 100%;
+            width: 120px;
         }
 
         .ll {
@@ -192,10 +195,10 @@ h2{
         <div class="inbody">
             <div class="first">
                 <div class="col">
-                    <div><img
+                    <div><img onclick="okbro()"
                             src="https://s3.ap-southeast-1.amazonaws.com/images.deccanchronicle.com/dc-Cover-j5mcrus0a32ek6afjl3e8pkrl0-20220614112956.jpeg"
                             alt="">
-                        <h3>Prophet remark row: Mangaluru police
+                        <h3 onclick="okbro()">Prophet remark row: Mangaluru police
                             Commissioner holds talks with Muslim
                             leaders</h3>
                         <p>The meeting was called after Some Muslim leaders expressed
@@ -211,9 +214,9 @@ h2{
                 </div>
                 <div class="mop">
                     <div>
-                        <img src="https://s3.ap-southeast-1.amazonaws.com/images.deccanchronicle.com/dc-Cover-j5mcrus0a32ek6afjl3e8pkrl0-20220614122505.jpeg"
+                        <img onclick="okbro2()" src="https://s3.ap-southeast-1.amazonaws.com/images.deccanchronicle.com/dc-Cover-j5mcrus0a32ek6afjl3e8pkrl0-20220614122505.jpeg"
                             alt="">
-                        <p>CPI(M) MP writes to
+                        <p onclick="okbro2()">CPI(M) MP writes to
                             DGCA alleging assault
                             on Kerala CM inside
                             flight</p>
@@ -278,9 +281,9 @@ h2{
 
 
                 <div>
-                    <h4>World's largest cricket jersey
+                    <h4 onclick="okbro3()">World's largest cricket jersey
                         was made within nine days</h4>
-                    <img src="https://s3.ap-southeast-1.amazonaws.com/images.deccanchronicle.com/dc-Cover-b5nq5e0ku3g1nctek2tkqtah67-20220601160558.jpeg"
+                    <img  onclick="okbro3()" src="https://s3.ap-southeast-1.amazonaws.com/images.deccanchronicle.com/dc-Cover-b5nq5e0ku3g1nctek2tkqtah67-20220601160558.jpeg"
                         alt="">
                 </div>
                 <div>
@@ -541,5 +544,14 @@ h2{
     function topFunction() {
       document.body.scrollTop = 0;
       document.documentElement.scrollTop = 0;
+    }
+    function okbro(){
+        window.location.href="http://127.0.0.1:5500/ik.html"
+    }
+    function okbro2(){
+        window.location.href="http://127.0.0.1:5500/3.html"
+    }
+    function okbro3(){
+        window.location.href="http://127.0.0.1:5500/2nd.html"
     }
     </script>
