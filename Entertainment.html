@@ -492,7 +492,7 @@
 </div>
     <div id="smallnews">
         <div><img 
-            class="smallimg" src="https://s3.ap-southeast-1.amazonaws.com/images.deccanchronicle.com/dc-Cover-rr3g3eqojk0d79epl7ch1jgca3-20220606023535.jpeg" alt="">
+            class="smallimg" id="bug" src="https://s3.ap-southeast-1.amazonaws.com/images.deccanchronicle.com/dc-Cover-rr3g3eqojk0d79epl7ch1jgca3-20220606023535.jpeg" alt="">
         <p> Bitten by the writing bug</p>
     </div>
         <div>
@@ -545,7 +545,7 @@
         <div id="inmostviews">
         <div>
             <h3>Sridevi Soda Center movie review</h3>
-        <img id="mp" src="https://s3.ap-southeast-1.amazonaws.com/images.deccanchronicle.com/dc-Cover-kuri4cmn6lbhmd8t5amea0t2h5-20210827164123.jpeg" alt=""></div>
+        <img id="shridevi" id="mp"  src="https://s3.ap-southeast-1.amazonaws.com/images.deccanchronicle.com/dc-Cover-kuri4cmn6lbhmd8t5amea0t2h5-20210827164123.jpeg" alt=""></div>
         <div>
             <h3>Ram Asur movie review</h3>
         <img src="https://s3.ap-southeast-1.amazonaws.com/images.deccanchronicle.com/dc-Cover-q9gb6bjnf130u6odpb1b0lerr3-20211119180015.jpeg" alt="">
@@ -866,9 +866,22 @@
         window.location.href = "http://127.0.0.1:5500/2nd.html"
     }
     document.querySelector("#salmon").addEventListener("click",link1);
-
+    document.querySelector("#nani").addEventListener("click",link2);
+    document.querySelector("#bug").addEventListener("click",link3);
+    document.querySelector("#shridevi").addEventListener("click",link4);
     function link1(){
         window.location.href="https://www.deccanchronicle.com/entertainment/bollywood/100622/salman-khan-denies-any-threat-to-life.html"
     }
+    function link2(){
+        window.location.href="https://www.deccanchronicle.com/entertainment/tollywood/070622/ante-sundaraniki-is-a-light-hearted-drama.html"
+    }
+
+function link3(){
+window.location.href="https://www.deccanchronicle.com/entertainment/tollywood/050622/bitten-by-the-writing-bug.html";
+}
+function link4(){
+    window.location.href="https://www.deccanchronicle.com/entertainment/tollywood/270821/sridevi-soda-center-movie-review.html";
+}
+
 
 </script>
