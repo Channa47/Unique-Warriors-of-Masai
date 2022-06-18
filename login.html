@@ -199,32 +199,13 @@ label {
         <img src="https://play-lh.googleusercontent.com/KwnHWCZmrNPKLXtv41JSaCyLzC6X6CoXXAXSKi43HgwUG-Gan4MXDQvXq6oZDg-gck4" alt="" ></div>
         <div>  
            <!-- main content area  -->
-            <label for="name"> Mobile Number / Email Id</label>
-            <br>
-
-            <input type="text" style="width:90%; line-height: 30px;" placeholder="Enter your mobile Number / Email Id">
-            <br><br>
-            <label for="number">Password</label>
-            <br>
-            <input type="password" style="width: 90%; line-height: 30px; " size="50"  placeholder="Password"> <br>
-           
-            <br>
-                <input type="checkbox" name="rememberme"
-                       checked>
-                <label for="rememberme">Remember me for 30 days</label> <span id="span">forgot Password?</span>
-              <br>
-              <input type="checkbox" name = "otp" >
-              <label for="otp">  Login with OTP instead of Password  </label>
-              <br>
-              <button id="loginbutton">Login</button>
-        
+           <form action="">
+            <input  id="email" type="email" placeholder="Enter email">
+            <input id="password" type="password" placeholder = "creat a passowrd">
+            <input type="submit" name="" id="submit">
+           </form>
         </div>
-        
     </div>
-    
-
-
-    
 </body>
 </html>
 
@@ -265,6 +246,35 @@ label {
     function openhome(){
         window.location.href="";
     }
+    let userdata = JSON.parse(localStorage.getItem("userdata"))||[];
+    let form = document.querySelector("form");
+    form.addEventListener("submit",function(event){
+      event.preventDefault();
+      let data = {
+        email : form.email.value,
+        passwaord : form.password.value
+      }
+      if(checksighin(data.mail,data.passwaord)===true){
+        // userdata.push(data);
+        localStorage.setItem("sign",JSON.stringify(data));
+        alert("sigh in Successfull")
+        window.location.href="index.html";
+      }else{
+        alert("wrong email/password");
+      }
+
+    })
+    function checksighin(email,passowrd){
+        let fiiltered = userdata.filter(function(elem){
+          return elem.email === email && elem.passowrd === passowrd;
+        })
+        if(fiiltered.length>0){
+          return false;
+        }else{
+          return true;
+        }
+    }
+    
 
 
 

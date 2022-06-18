@@ -109,15 +109,13 @@
 .container {
   display: flex;
   flex-wrap: wrap;
-
-  border: 1px solid transparent;
-
   justify-content: center;
   align-items: center;
+  margin-top: -30px;
 }
-.container > div {
-  padding: 20px;
-  margin: 40px;
+.container > form {
+  /* padding: 20px;
+  margin: 40px; */
 }
 #loginbutton {
   background-color: gray;
@@ -182,6 +180,9 @@ label {
     display: none;
   }
 }
+#form{
+ display: inline;
+}
 
 </style>
 
@@ -231,14 +232,12 @@ label {
            <!-- main content area  -->
            <div id ="joindeccan">
                <h4>SUBSCRIBE FOR DAILY UPDATES</h4>
-               
-               
            </div>
-           <hr>
-            <label for="name"> Mobile Number / Email Id</label>
+           <!-- <hr>
+            <label for="name"> Email Id</label>
             <br>
 
-            <input type="text"  class="inputtag" placeholder="Enter your mobile Number / Email Id">
+            <input type="text"  id="mail" placeholder="Enter your Email Id">
             <br><br>
           <label for="number">Mobile Number</label>
           <br>
@@ -253,33 +252,32 @@ label {
             <option value="">+84(CHL)</option>
             <option value="">+971(UAE)</option>
             <option value="">+1(USA)</option>
-            
-
-            
         </select>      
            
           <input type="text" class="inputtag" style="width: 70%; " placeholder="Mobile Number">
           <br>  
             <label for="password">Create New Password</label><br>
-            <input type="password" class="inputtag"  size="50"  placeholder="Password"> <br>
+            <input type="password" class="password"  size="50"  placeholder="Password"> <br>
            
               <br>
               <input type="checkbox" name="checkbox" >
               <label for="checkbox">  Receive relavent offers and Promotional communication <br>from Deccan Chronicle  </label>
               <br>
               <span  id="span">by signing up I agree to </span><span style="color:Deepskyblue; font-size: 14px;" >terms.</span></span> 
-              <button id="loginbutton">Register</button>
+              <button id="submit">Register</button>
         
         </div>
-        
+         -->
+         <form id="form" action="">
+          <input type="text" name="" id="" placeholder="name">
+          <input type="text" name="" id="" placeholder="state">
+          <input  id="email" type="email" placeholder="Enter email">
+          <input id="password" type="password" placeholder = "creat a passowrd">
+          <input type="submit" name="login" id="submit">
+         </form>
     </div>
-    
-
-
-    
 </body>
 </html>
-
 <script>
   document.querySelector("#ep").addEventListener("click",op);
   function op(){
@@ -317,6 +315,34 @@ label {
     function openhome(){
         window.location.href="nation.html";
     }
+    let userdata = JSON.parse(localStorage.getItem("userdata"))||[];
+    let form = document.querySelector("form");
+    form.addEventListener("submit",function(event){
+      event.preventDefault();
+      let data = {
+        email : form.email.value,
+        passwaord : form.password.value
+      }
+      if(checkemail(data.mail)===true){
+        userdata.push(data);
+        localStorage.setItem("userdata",JSON.stringify(userdata))
+        window.location.href="login.html";
+      }else{
+        alert("Your are email is already exist please try to sing in ");
+      }
+
+    })
+    function checkemail(email){
+        let fiiltered = userdata.filter(function(elem){
+          return email === elem.email;
+        })
+        if(fiiltered.length>0){
+          return false;
+        }else{
+          return true;
+        }
+    }
+   
 
 
 </script>
