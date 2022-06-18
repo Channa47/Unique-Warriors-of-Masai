@@ -1,2 +1,2 @@
-# Unique-Warriors-of-Masai
-Deccanchronicle.com
+# Masai-Warriors
+project

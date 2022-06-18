@@ -5,41 +5,49 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>south</title>
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style2.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    
     <style>
-        * {
-            margin: 0px;
-            padding: 0px;
-        }
-.ffff{
+       *{
+margin: 0px;
+padding:0px;
+        } 
+        .ffff{
     width: 100%;
     height: 40px;
 }
-
-
         /* for more button */
 #more{
     border: none;
     padding:10px;
     margin:auto;
     background-color: transparent;
+    font-size: 17px;
+}
+#more:hover{
+    background-color: rgb(0, 0, 0);
+            padding: 20px;
+            color:white;
+            font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
 }
 .navbar{
-    width: 75%;
+    width: 80%;
     margin: auto;
 }
 
         .navbar-list {
             display: flex;
-            gap: 10px;
+            justify-content: space-evenly;
             list-style-type: none;
-
+            font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
         }
 
         #hr1 {
             margin-top: 8px;
             border: 2px solid black;
-            background-color: black;
         }
 
         #hr2 {
@@ -49,53 +57,53 @@
         width:30px;
         height:30px;
         margin: auto;
+        padding:10px;
+  color: rgba(255, 255, 255, 0.8);
+  padding: 15px 20px;
+  border-radius: 4px;
+  transition: all 0.2s ease-in-out;
+        }
+        .navbar-list>img:hover{
+            color: rgba(255, 255, 255, 1);
+  box-shadow: 0 5px 15px rgba(145, 92, 182, .4);
         }
 
+
         .navbar-list>li {
-            /* background-color: rgb(238,238,238); */
-            /* border: 1px solid black; */
             padding: 25px 15px;
-            /* box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; */
         }
 
         #deccan {
             margin: auto;
             text-align: center;
             margin-top: 10px;
+            text-decoration:underline;
+            text-decoration-color: teal;
+            line-height: 20px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
         }
 
         #deccan>img {
             height: 50px;
             width: 200px;
         }
-
-        a:hover {
-            color: teal;
-            background-color:transparent;
-        }
-
-        #hr1 {
-            margin-bottom: -10px;
-        }
-
-        #hr2 {
-            margin-top: -10px;
-        }
-
-        a {
+       .navbar-list a {
             text-decoration: none;
             color: black;
         }
 
-        li:hover {
-            background-color: rgb(238, 238, 238);
+      .navbar-list  a:hover {
+            background-color: rgb(0, 0, 0);
+            padding: 20px;
+            color:white;
         }
+
 
         #navii {
             position: fixed;
             display: flex;
             text-align: center;
-            justify-content: space-between;
+            justify-content: space-around;
             margin-top: -8px;
             background-color: black;
             height: 50px;
@@ -142,6 +150,7 @@
             width: 20px;
             cursor: pointer;
             transition: 1s;
+            margin: auto;
         }
 
         .im:hover {
@@ -179,20 +188,33 @@
         .ch:hover {
             transform: scale(1.1);
         }
-
+.home{
+    width:80%;
+    margin: auto;
+    display: flex;
+    justify-items: flex-start;
+    align-items: flex-start;
+    margin-top: 30px;
+    padding-left: 20px;
+}
+.home>img{
+    width:20px;
+    height: 20px;
+}
+.home>img+p{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
         #main {
-            width: 75%;
+            width: 80%;
             margin: auto;
             height: auto;
-            margin-top: 30px;
-            height: 1000px;
         }
 
         .inbody {
             display: grid;
-            grid-template-columns: 70% 29%;
+            grid-template-columns: 70% 30%;
             grid-template-rows: auto;
-            gap: 56px
+            gap: 50px
         }
 
         .first {
@@ -215,6 +237,7 @@
             box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
             border-radius: 10px 10px 0px 0px;
             padding-bottom: 20px;
+            font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
         }
 
         .col>div>img {
@@ -225,6 +248,7 @@
 
         h3+p {
             padding-top: 10px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
 
         .first>div:last-child {
@@ -256,15 +280,18 @@
             background-color: whitesmoke;
 
         }
+
         .second>div {
             display: flex;
             box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
             padding-left: 20px;
-            line-height: 24px;
+            line-height: 30px;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
         }
 
         .second>div>img {
-            width: 120px;
+            width: 150px;
+            padding-left: 10px;
         }
 
         .ll {
@@ -337,7 +364,7 @@
             font-size: 30px;
             border: none;
             outline: none;
-            background-color: red;
+            background-color: rgb(0, 0, 0);
             color: white;
             cursor: pointer;
             padding: 15px;
@@ -395,6 +422,36 @@
     <div class="ffff">
        
     </div>
+<!-- sidebar starts here -->
+    <div class="wrapper">
+        <input type="checkbox" id="btn" hidden>
+        <label for="btn" class="menu-btn">
+        <i class="fas fa-bars"></i>
+        <i class="fas fa-times"></i>
+        </label>
+        <nav id="sidebar">
+           <div class="title">
+              Side Menu
+           </div>
+           <ul class="list-items">
+            <li><a href="#"><i class="fas fa-home"></i>Home</a></li>
+            <li><a href="nation.html"><i class="fas fa-stream"></i></i>Nation</a></li>
+            <li><a href="south.html"><i class="fas fa-stream"></i>South</a></li>
+            <li><a href="lifestyle.html"><i class="fas fa-stream"></i></i>Lifestyle</a></li>
+            <li><a href="Entertainment.html"><i class="fas fa-stream"></i>Entertainment</a></li>
+            <li><a href="#"><i class="fas fa-user"></i>Login/Sign-up</a></li>
+            <li><a href="#"><i class="fas fa-globe-asia"></i>About us</a></li>
+            <li><a href="#"><i class="fas fa-envelope"></i>Contact us</a></li>
+            <div class="icons">
+               <a href="https://www.facebook.com/deccannews/"><i class="fab fa-facebook-f"></i></a>
+               <a href="https://twitter.com/DeccanChronicle"><i class="fab fa-twitter"></i></a>
+               <a href="https://www.instagram.com/deccanchronicle_official/"><i class="fab fa-instagram"></i></a>
+               <a href="https://www.youtube.com/channel/UCDPQnT1RtKxcs-xNpqVvbdA"><i class="fab fa-youtube"></i></a>
+              </div>
+           </ul>
+        </nav>
+     </div>
+     <!-- sidebar ends here -->
     <div id="deccan">
         <img src="https://www.deccanchronicle.com/images/DeccanChronicle_Logo.webp" alt="error">
         <p>Wednesday, Jun 15, 2022 | Last Update : 06:12 PM IST</p>
@@ -403,9 +460,8 @@
         <nav class="navbar">
             <hr id="hr1">
             <ul class="navbar-list">
-                <img id="shubam"
-                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIkAAACCCAMAAABFPRs4AAAAbFBMVEUAAAD///+IiIjFxcXCwsLW1tb29vb8/Pzt7e35+fnn5+fa2tq9vb3y8vJjY2OPj49/f3+srKw0NDRSUlKZmZlycnJsbGzh4eEeHh7Ly8u2trZCQkIZGRlaWlqjo6MlJSURERE7OzstLS1JSUl6YLXPAAAEg0lEQVR4nO2b22KqMBBFo60IWK1glSp6qvb///FolUyykwkBQ+1D9iNRukjmLhWjx/W22gW4i3j8FoUQovgLJB/iqo/nk6zFTesnk8w3otFm/kyS+UGQVunzSPKj0JQ/i2QiUJPQJPkEVNk+9XI0SMRrYJIl/oGF5UP/TI6L/oUlGeP9LS76bgUR4v23SYxtk1oOSoJ3n65YkIs3TwckGevruQvkgtLLm/uQVLW+eiz2+oWT1dfCk8xgcV+N8k+4NhuKRHWIN9tZpAe4+jYQiZLzC1ha3BLffAHXO1csXffkA1Y2cmXDficgiXSG6RpWVAPCWLfu5s0+JIsm3U/RGvTYjgd36ITiQXJoLifgvYZZvsJ63aV4aieR8XVS6n/naNYAEwgsZYcyoZVEGt72S/8rnxS+qMmozvChbTAS6b8vsPMl1YoLpWpIT/C5l0Ak0hKwGtkkzcpPLUs1bIbu5VuxuEnk3mIYWWbNyj0bfsuzyrBg8GyFnCQye+DNqUqoGuvZV8bXzU/3JJGWkGARQJF8q1wl48TAskpG7eJJagkC3quEET0bkgthYCk9UFgS+Rw5OKbj2ck4t7Bybi+eOBJ5tui9yj2NRKlYRIr8rd7MkLw3KWOH+0wBHJPvVQuZahIMLG0zFivJWqZYh+3Za9lvuZ5gumypWKwk0iHRe6kIyNGMG53Jm7FMcHuzqy92xCjMhopKsmgjHrpcyEGSoCHwrqGLUPgc0YUkxcem7hvNGEUW4cib3iQVNA5f/JOaUo4RvHnPtkIcyeSo3+FMNQ+evhtlhihc8cSQ4P7X8oCNrG/XQiZro+ZkAoudBPd/JVeSby8QlX3krsOdJHy/MMfIyYuM0+hNrK2QjQTbOeXQsf91SbEI3GPbjMokSfm+0jZZc4n83uhhTW82SIzZCFUjbWHEFBmnta93kuR4M5o/+HgviiwCZx0CAwuQYBivCYSfrLm0lMaO8x8BrZBOwu+hkQ29UaQ3O87dIOFbbKOo9teKaitnxaKS8N1BCp1oJ32ScfL1jkbCj2Iwd3RFIWPDmLmxkBgjVntT00+OVihDkhzziX814iP+sepKJ5lhPulWBLRLqVhg5TRTSRD0yBtZX9HoP4dxz/3shG3/DzSDwCTUX1SxGMPbXUNi1L0yAhjZ8CEU+Xxz24xFuEasxoDoMZV05ohyMSORYRjhbetx8X6wyQTS9a9GfMRXLGsB2ZqfgYQRW7FMhObBSlxub2r6iQ6/UpPZ9mqxtE+OXBVOlFdzQiluXtzkYGU2EtJ7UXL6Tp3C+B5P7htAvUSK5VVYnbD/+NkmIS+M6ZcH7rfgUKKyZHo9j9sW3PJOVmvdkDlAG4rk+tSnWxq45+JUa1Z/k2S0u7uJ369vQ5I0iiSRJJJEkkgSSSJJJIkkkSSSRJJIEkkiSSQJQFIXr5yK9tFYQJJzZvvaXVnrL2QBSdxvjuMvrEOSuF9OwxdxIkkkiSSRJJJEkkgSSSJJJIkkkeTPkLS+4fAgifcb3eb7vYFJrP8HbX/fftvy+thDJKX9/yb/A1vhRUcIZgWIAAAAAElFTkSuQmCC" alt="">
-                <li class="nation"><a href="index.html">Nation</a></li>
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIkAAACCCAMAAABFPRs4AAAAbFBMVEUAAAD///+IiIjFxcXCwsLW1tb29vb8/Pzt7e35+fnn5+fa2tq9vb3y8vJjY2OPj49/f3+srKw0NDRSUlKZmZlycnJsbGzh4eEeHh7Ly8u2trZCQkIZGRlaWlqjo6MlJSURERE7OzstLS1JSUl6YLXPAAAEg0lEQVR4nO2b22KqMBBFo60IWK1glSp6qvb///FolUyykwkBQ+1D9iNRukjmLhWjx/W22gW4i3j8FoUQovgLJB/iqo/nk6zFTesnk8w3otFm/kyS+UGQVunzSPKj0JQ/i2QiUJPQJPkEVNk+9XI0SMRrYJIl/oGF5UP/TI6L/oUlGeP9LS76bgUR4v23SYxtk1oOSoJ3n65YkIs3TwckGevruQvkgtLLm/uQVLW+eiz2+oWT1dfCk8xgcV+N8k+4NhuKRHWIN9tZpAe4+jYQiZLzC1ha3BLffAHXO1csXffkA1Y2cmXDficgiXSG6RpWVAPCWLfu5s0+JIsm3U/RGvTYjgd36ITiQXJoLifgvYZZvsJ63aV4aieR8XVS6n/naNYAEwgsZYcyoZVEGt72S/8rnxS+qMmozvChbTAS6b8vsPMl1YoLpWpIT/C5l0Ak0hKwGtkkzcpPLUs1bIbu5VuxuEnk3mIYWWbNyj0bfsuzyrBg8GyFnCQye+DNqUqoGuvZV8bXzU/3JJGWkGARQJF8q1wl48TAskpG7eJJagkC3quEET0bkgthYCk9UFgS+Rw5OKbj2ck4t7Bybi+eOBJ5tui9yj2NRKlYRIr8rd7MkLw3KWOH+0wBHJPvVQuZahIMLG0zFivJWqZYh+3Za9lvuZ5gumypWKwk0iHRe6kIyNGMG53Jm7FMcHuzqy92xCjMhopKsmgjHrpcyEGSoCHwrqGLUPgc0YUkxcem7hvNGEUW4cib3iQVNA5f/JOaUo4RvHnPtkIcyeSo3+FMNQ+evhtlhihc8cSQ4P7X8oCNrG/XQiZro+ZkAoudBPd/JVeSby8QlX3krsOdJHy/MMfIyYuM0+hNrK2QjQTbOeXQsf91SbEI3GPbjMokSfm+0jZZc4n83uhhTW82SIzZCFUjbWHEFBmnta93kuR4M5o/+HgviiwCZx0CAwuQYBivCYSfrLm0lMaO8x8BrZBOwu+hkQ29UaQ3O87dIOFbbKOo9teKaitnxaKS8N1BCp1oJ32ScfL1jkbCj2Iwd3RFIWPDmLmxkBgjVntT00+OVihDkhzziX814iP+sepKJ5lhPulWBLRLqVhg5TRTSRD0yBtZX9HoP4dxz/3shG3/DzSDwCTUX1SxGMPbXUNi1L0yAhjZ8CEU+Xxz24xFuEasxoDoMZV05ohyMSORYRjhbetx8X6wyQTS9a9GfMRXLGsB2ZqfgYQRW7FMhObBSlxub2r6iQ6/UpPZ9mqxtE+OXBVOlFdzQiluXtzkYGU2EtJ7UXL6Tp3C+B5P7htAvUSK5VVYnbD/+NkmIS+M6ZcH7rfgUKKyZHo9j9sW3PJOVmvdkDlAG4rk+tSnWxq45+JUa1Z/k2S0u7uJ369vQ5I0iiSRJJJEkkgSSSJJJIkkkSSSRJJIEkkiSSQJQFIXr5yK9tFYQJJzZvvaXVnrL2QBSdxvjuMvrEOSuF9OwxdxIkkkiSSRJJJEkkgSSSJJJIkkkeTPkLS+4fAgifcb3eb7vYFJrP8HbX/fftvy+thDJKX9/yb/A1vhRUcIZgWIAAAAAElFTkSuQmCC" alt="">
+                <li class="nation"><a href="nation.html">Nation</a></li>
                 <li><a href="south.html">South</a></li>
                 <li><a href="world.html">World</a></li>
                 <li><a href="Entertainment.html">Entertainment</a></li>
@@ -432,6 +488,10 @@
             <hr id="hr2">
         </nav>
     </header>
+    <div class="home">
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIkAAACCCAMAAABFPRs4AAAAbFBMVEUAAAD///+IiIjFxcXCwsLW1tb29vb8/Pzt7e35+fnn5+fa2tq9vb3y8vJjY2OPj49/f3+srKw0NDRSUlKZmZlycnJsbGzh4eEeHh7Ly8u2trZCQkIZGRlaWlqjo6MlJSURERE7OzstLS1JSUl6YLXPAAAEg0lEQVR4nO2b22KqMBBFo60IWK1glSp6qvb///FolUyykwkBQ+1D9iNRukjmLhWjx/W22gW4i3j8FoUQovgLJB/iqo/nk6zFTesnk8w3otFm/kyS+UGQVunzSPKj0JQ/i2QiUJPQJPkEVNk+9XI0SMRrYJIl/oGF5UP/TI6L/oUlGeP9LS76bgUR4v23SYxtk1oOSoJ3n65YkIs3TwckGevruQvkgtLLm/uQVLW+eiz2+oWT1dfCk8xgcV+N8k+4NhuKRHWIN9tZpAe4+jYQiZLzC1ha3BLffAHXO1csXffkA1Y2cmXDficgiXSG6RpWVAPCWLfu5s0+JIsm3U/RGvTYjgd36ITiQXJoLifgvYZZvsJ63aV4aieR8XVS6n/naNYAEwgsZYcyoZVEGt72S/8rnxS+qMmozvChbTAS6b8vsPMl1YoLpWpIT/C5l0Ak0hKwGtkkzcpPLUs1bIbu5VuxuEnk3mIYWWbNyj0bfsuzyrBg8GyFnCQye+DNqUqoGuvZV8bXzU/3JJGWkGARQJF8q1wl48TAskpG7eJJagkC3quEET0bkgthYCk9UFgS+Rw5OKbj2ck4t7Bybi+eOBJ5tui9yj2NRKlYRIr8rd7MkLw3KWOH+0wBHJPvVQuZahIMLG0zFivJWqZYh+3Za9lvuZ5gumypWKwk0iHRe6kIyNGMG53Jm7FMcHuzqy92xCjMhopKsmgjHrpcyEGSoCHwrqGLUPgc0YUkxcem7hvNGEUW4cib3iQVNA5f/JOaUo4RvHnPtkIcyeSo3+FMNQ+evhtlhihc8cSQ4P7X8oCNrG/XQiZro+ZkAoudBPd/JVeSby8QlX3krsOdJHy/MMfIyYuM0+hNrK2QjQTbOeXQsf91SbEI3GPbjMokSfm+0jZZc4n83uhhTW82SIzZCFUjbWHEFBmnta93kuR4M5o/+HgviiwCZx0CAwuQYBivCYSfrLm0lMaO8x8BrZBOwu+hkQ29UaQ3O87dIOFbbKOo9teKaitnxaKS8N1BCp1oJ32ScfL1jkbCj2Iwd3RFIWPDmLmxkBgjVntT00+OVihDkhzziX814iP+sepKJ5lhPulWBLRLqVhg5TRTSRD0yBtZX9HoP4dxz/3shG3/DzSDwCTUX1SxGMPbXUNi1L0yAhjZ8CEU+Xxz24xFuEasxoDoMZV05ohyMSORYRjhbetx8X6wyQTS9a9GfMRXLGsB2ZqfgYQRW7FMhObBSlxub2r6iQ6/UpPZ9mqxtE+OXBVOlFdzQiluXtzkYGU2EtJ7UXL6Tp3C+B5P7htAvUSK5VVYnbD/+NkmIS+M6ZcH7rfgUKKyZHo9j9sW3PJOVmvdkDlAG4rk+tSnWxq45+JUa1Z/k2S0u7uJ369vQ5I0iiSRJJJEkkgSSSJJJIkkkSSSRJJIEkkiSSQJQFIXr5yK9tFYQJJzZvvaXVnrL2QBSdxvjuMvrEOSuF9OwxdxIkkkiSSRJJJEkkgSSSJJJIkkkeTPkLS+4fAgifcb3eb7vYFJrP8HbX/fftvy+thDJKX9/yb/A1vhRUcIZgWIAAAAAElFTkSuQmCC" alt="">
+        <p>&#187; South</p>
+    </div>
     <div id="main">
         <h1>South</h1>
         <div class="inbody">
@@ -685,8 +745,8 @@
             <h2> Karnatka </h2>
             <div id="tel2">
                 <div>
-                    <img src="https://s3.ap-southeast-1.amazonaws.com/images.deccanchronicle.com/dc-Cover-okb4hm6shnhc93fpbg7ovqvqv0-20220219095628.jpeg"
-                        alt="">
+                  <img id="hizz" onclick="okbrohizz()" src="https://s3.ap-southeast-1.amazonaws.com/images.deccanchronicle.com/dc-Cover-okb4hm6shnhc93fpbg7ovqvqv0-20220219095628.jpeg"
+                        alt=""> 
                     <h4>Hizbul Mujahideen terrorist held
                         in Bengaluru
 
@@ -769,6 +829,51 @@
             </div>
         </div>
     </div>
+        <footer class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="footer-col">
+                        <h4>company</h4>
+                        <ul>
+                            <li><a href="#">about us</a></li>
+                            <li><a href="#">our services</a></li>
+                            <li><a href="#">privacy policy</a></li>
+                            <li><a href="#">affiliate program</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>get help</h4>
+                        <ul>
+                            <li><a href="#">FAQ</a></li>
+                            <li><a href="#">Deccan Chronicle is best</a></li>
+                            <li><a href="#">Why north side isn't here</a></li>
+                            <li><a href="#">Can i get a contact No.</a></li>
+                            <li><a href="#">How to watch it on Youtube</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>refer</h4>
+                        <ul>
+                            <li><a href="#">watch</a></li>
+                            <li><a href="#">south</a></li>
+                            <li><a href="#">Masai</a></li>
+                            <li><a href="#">Shivam Moudgil</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>follow us</h4>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+       </footer>
+    
+    
 </body>
 
 </html>
@@ -792,17 +897,17 @@
 
     
     function okbro() {
-        window.location.href = "http://127.0.0.1:5500/ik.html"
+        window.location.href = "ik.html"
         
     }
     function okbro2() {
-        window.location.href = "http://127.0.0.1:5500/3.html"
+        window.location.href = "3.html"
     }
     function okbro3() {
-        window.location.href = "http://127.0.0.1:5500/2nd.html"
+        window.location.href = "2nd.html"
     }
-    document.querySelector("#shubam").addEventListener("click",op8);
-    function op8(){
-        window.location.href = "business.html";
+    function okbrohizz(){
+        window.location.href = "https://www.deccanchronicle.com/nation/crime/070622/hizbul-mujahideen-terrorist-held-in-bengaluru.html"
+        document.getElementById("hizz").style.cursor="pointer"
     }
 </script>
