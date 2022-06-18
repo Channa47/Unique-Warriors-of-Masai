@@ -5,11 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nation</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style2.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
    <style>
       .navbar-list{
             display: flex;
             gap: 30px;
             list-style-type: none;
+            padding: 10px;
         }
         #hr1{
            height: 2px;
@@ -242,7 +246,10 @@
     width: 30px;
     height: 30px;
     margin: auto;
-    margin-bottom: 25px;
+    /* margin-top: 10px; */
+    /* margin-bottom: -10px; */
+    /* margin-bottom: 25px; */
+
    }
     </style>
 </head>
@@ -271,6 +278,36 @@
             <div id="cirp">Corporate insolvency resolution Process</div>
         </div>
     </div>
+    <!-- side bar -->
+    <div class="wrapper">
+        <input type="checkbox" id="btn" hidden>
+        <label for="btn" class="menu-btn">
+        <i class="fas fa-bars"></i>
+        <i class="fas fa-times"></i>
+        </label>
+        <nav id="sidebar">
+           <div class="title">
+              Side Menu
+           </div>
+           <ul class="list-items">
+            <li><a href="#"><i class="fas fa-home"></i>Home</a></li>
+            <li><a href="index.html"><i class="fas fa-stream"></i></i>Nation</a></li>
+            <li><a href="south.html"><i class="fas fa-stream"></i>South</a></li>
+            <li><a href="lifestyle.html"><i class="fas fa-stream"></i></i>Lifestyle</a></li>
+            <li><a href="Entertainment.html"><i class="fas fa-stream"></i>Entertainment</a></li>
+            <li><a href="#"><i class="fas fa-user"></i>Login/Sign-up</a></li>
+            <li><a href="#"><i class="fas fa-globe-asia"></i>About us</a></li>
+            <li><a href="#"><i class="fas fa-envelope"></i>Contact us</a></li>
+            <div class="icons">
+               <a href="https://www.facebook.com/deccannews/"><i class="fab fa-facebook-f"></i></a>
+               <a href="https://twitter.com/DeccanChronicle"><i class="fab fa-twitter"></i></a>
+               <a href="https://www.instagram.com/deccanchronicle_official/"><i class="fab fa-instagram"></i></a>
+               <a href="https://www.youtube.com/channel/UCDPQnT1RtKxcs-xNpqVvbdA"><i class="fab fa-youtube"></i></a>
+              </div>
+           </ul>
+        </nav>
+     </div>
+     <!-- side bar   -->
 
     <div id="deccan">
         <img src="https://www.deccanchronicle.com/images/DeccanChronicle_Logo.webp" alt="error">
@@ -454,6 +491,51 @@
         </div>
     </div>
     <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+    <!-- fooot -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col">
+                    <h4>company</h4>
+                    <ul>
+                        <li><a href="#">about us</a></li>
+                        <li><a href="#">our services</a></li>
+                        <li><a href="#">privacy policy</a></li>
+                        <li><a href="#">affiliate program</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>get help</h4>
+                    <ul>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Deccan Chronicle is best</a></li>
+                        <li><a href="#">Why north side isn't here</a></li>
+                        <li><a href="#">Can i get a contact No.</a></li>
+                        <li><a href="#">How to watch it on Youtube</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>refer</h4>
+                    <ul>
+                        <li><a href="#">watch</a></li>
+                        <li><a href="#">south</a></li>
+                        <li><a href="#">Masai</a></li>
+                        <li><a href="#">Shivam Moudgil</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>follow us</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+   </footer>
+   <!-- footer -->
 </body>
 </html>
 <script>
