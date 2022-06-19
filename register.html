@@ -269,11 +269,11 @@ label {
         </div>
          -->
          <form id="form" action="">
-          <input type="text" name="" id="" placeholder="name">
-          <input type="text" name="" id="" placeholder="state">
+          <input type="text" name="name" id="name" placeholder="name">
+          <input type="text" name="state" id="state" placeholder="state">
           <input  id="email" type="email" placeholder="Enter email">
           <input id="password" type="password" placeholder = "creat a passowrd">
-          <input type="submit" name="login" id="submit">
+          <input  type="submit" name="login" id="submit">
          </form>
     </div>
 </body>
@@ -315,22 +315,26 @@ label {
     function openhome(){
         window.location.href="nation.html";
     }
-    let userdata = JSON.parse(localStorage.getItem("userdata"))||[];
     let form = document.querySelector("form");
+    let userdata = JSON.parse(localStorage.getItem("userdata"))||[];
     form.addEventListener("submit",function(event){
       event.preventDefault();
       let data = {
+        name : form.name.value,
+        state : form.state.value,
         email : form.email.value,
-        passwaord : form.password.value
+        password : form.password.value
       }
-      if(checkemail(data.mail)===true){
+      if(checkemail(data.email)===true){
         userdata.push(data);
         localStorage.setItem("userdata",JSON.stringify(userdata))
+        alert("registration sucessfull")
         window.location.href="login.html";
       }else{
-        alert("Your are email is already exist please try to sing in ");
+        alert("Your are email is already exist please try to sing in");
+        window.location.href="login.html";
       }
-
+      
     })
     function checkemail(email){
         let fiiltered = userdata.filter(function(elem){

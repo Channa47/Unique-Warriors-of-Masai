@@ -201,7 +201,7 @@ label {
            <!-- main content area  -->
            <form action="">
             <input  id="email" type="email" placeholder="Enter email">
-            <input id="password" type="password" placeholder = "creat a passowrd">
+            <input id="password" type="password" placeholder ="Enter passowrd">
             <input type="submit" name="" id="submit">
            </form>
         </div>
@@ -246,17 +246,18 @@ label {
     function openhome(){
         window.location.href="";
     }
-    let userdata = JSON.parse(localStorage.getItem("userdata"))||[];
+    
     let form = document.querySelector("form");
+    let userdata = JSON.parse(localStorage.getItem("userdata"))||[];
     form.addEventListener("submit",function(event){
       event.preventDefault();
       let data = {
         email : form.email.value,
-        passwaord : form.password.value
+        password : form.password.value
       }
-      if(checksighin(data.mail,data.passwaord)===true){
+      if(checksighin(data.email,data.password)===true){
         // userdata.push(data);
-        localStorage.setItem("sign",JSON.stringify(data));
+        localStorage.setItem("signin",JSON.stringify(data));
         alert("sigh in Successfull")
         window.location.href="index.html";
       }else{
@@ -264,16 +265,19 @@ label {
       }
 
     })
-    function checksighin(email,passowrd){
+    function checksighin(email,password){
         let fiiltered = userdata.filter(function(elem){
-          return elem.email === email && elem.passowrd === passowrd;
+          return elem.email === email && 
+                  elem.password === password;
         })
         if(fiiltered.length>0){
-          return false;
-        }else{
           return true;
+        }else{
+          return false;
         }
+        console.log(fiiltered.length);
     }
+    
     
 
 
