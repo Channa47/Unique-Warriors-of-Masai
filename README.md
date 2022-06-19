@@ -2,7 +2,7 @@
 project
 
 netlify link:-
-https://spontaneous-jalebi-4fdf40.netlify.app/south.html
+https://sunny-dasik-9f2fb7.netlify.app/
 
 github link :
 https://github.com/Channa47/Unique-Warriors-of-Masai
